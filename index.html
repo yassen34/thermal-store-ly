@@ -1,42 +1,40 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- Facebook Pixel Code -->
+<!-- Meta Pixel Code (Facebook/Instagram ad tracking) -->
+<!-- Rewritten from Meta's official minified snippet for readability. -->
+<!-- Behavior is 100% identical to what Meta's Events Manager provides. -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '1774339793801676'); 
+(function(win, doc, tagName, scriptUrl){
+  if(win.fbq) return; // already initialized, don't set up twice
+
+  // fbq() queues tracking calls until the real script below finishes loading
+  var fbq = win.fbq = function(){
+    fbq.callMethod
+      ? fbq.callMethod.apply(fbq, arguments)
+      : fbq.queue.push(arguments);
+  };
+  if(!win._fbq) win._fbq = fbq;
+  fbq.push = fbq;
+  fbq.loaded = true;
+  fbq.version = '2.0';
+  fbq.queue = [];
+
+  // Load Meta's actual pixel script asynchronously
+  var script = doc.createElement(tagName);
+  script.async = true;
+  script.src = scriptUrl;
+  var firstScript = doc.getElementsByTagName(tagName)[0];
+  firstScript.parentNode.insertBefore(script, firstScript);
+})(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1805221413996538');
 fbq('track', 'PageView');
-  fbq('track', 'InitiateCheckout');
 </script>
 <noscript>
- <img height="1" width="1" 
-src="https://www.facebook.com/tr?id=1774339793801676&ev=PageView
-&noscript=1"/>
+  <img height="1" width="1" style="display:none" alt=""
+       src="https://www.facebook.com/tr?id=1805221413996538&ev=PageView&noscript=1">
 </noscript>
-<!-- End Facebook Pixel Code -->
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2252083345571894');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2252083345571894&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,6 +65,9 @@ select.thickness{width:100%;padding:10px;margin:8px 0;background:#1a2538;color:#
 .cartrow:last-child{border:0}.qtybtn{background:#1a2538;border:1px solid #33415b;color:#fff;width:26px;height:26px;border-radius:8px;cursor:pointer;font-weight:800}
 .cartempty{color:var(--muted);text-align:center;padding:20px 0}
 .btn:disabled{opacity:.4;cursor:not-allowed}
+.iabwarn{display:none;background:linear-gradient(135deg,var(--a),#4f46e5);color:#fff;padding:12px 18px;text-align:center;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(124,58,237,.3)}
+.iabwarn.show{display:flex;align-items:center;justify-content:center;gap:10px}
+.iabwarn span{background:rgba(255,255,255,.2);border-radius:8px;padding:3px 8px;font-size:13px;white-space:nowrap}
 .usage{margin:12px 0;padding:12px;background:#0d1420;border:1px solid var(--line);border-radius:12px}
 .usage b{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 .usage ol{margin:0;padding-inline-start:18px;font-size:13px;color:#dbe3f0;line-height:1.9}
@@ -77,34 +78,9 @@ select.thickness{width:100%;padding:10px;margin:8px 0;background:#1a2538;color:#
 .contactline{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;margin-top:10px}
 @media(max-width:850px){.grid,.featuregrid{grid-template-columns:1fr}.navlinks{display:none}.pic{height:330px}.hero{padding-top:55px}.actions{grid-template-columns:1fr}}
 </style>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2252083345571894');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2252083345571894&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
-  <script>
-  fbq('track', 'InitiateCheckout');
-</script>
-<script>
-  fbq('track', 'InitiateCheckout');
-</script>
-  <body>
-    <script>
-  fbq('track', 'InitiateCheckout');
-</script>
+<body>
+<div class="iabwarn" id="iabWarning">💡 لأفضل تجربة وطلب سلس عبر واتساب <span>اضغط ⋮ واختر "فتح في المتصفح"</span></div>
 <header><div class="container nav">
 <a class="brand" href="#top">THERMAL <span>STORE</span> 🇱🇾</a>
 <nav class="navlinks"><a href="#products">المنتجات</a><a href="#why">المميزات</a><a href="#reviews">آراء العملاء</a><a href="#contact">تواصل معنا</a></nav>
@@ -228,6 +204,26 @@ src="https://www.facebook.com/tr?id=2252083345571894&ev=PageView&noscript=1"
 
 <script>
 const WHATSAPP='218919835687';
+// Detect Facebook/Instagram in-app browser (known to block WhatsApp handoff)
+(function(){
+ const ua=navigator.userAgent||'';
+ const isInApp=/FBAN|FBAV|FB_IAB|Instagram/i.test(ua);
+ if(isInApp){
+  const w=document.getElementById('iabWarning');
+  if(w)w.classList.add('show');
+ }
+})();
+// Reliable WhatsApp navigation: a real clicked <a> tag is handled better
+// by restrictive in-app browsers than a raw location.href assignment.
+function goToWhatsApp(url){
+ const a=document.createElement('a');
+ a.href=url;
+ a.target='_top';
+ a.rel='noopener';
+ document.body.appendChild(a);
+ a.click();
+ document.body.removeChild(a);
+}
 let selected='';
 function order(p){selected=p;document.getElementById('modalTitle').textContent='طلب: '+p;document.getElementById('modalText').textContent='أدخل بياناتك وسنجهز رسالة الطلب.';document.getElementById('modal').classList.add('show')}
 function info(t,x){selected=t;document.getElementById('modalTitle').textContent=t;document.getElementById('modalText').innerHTML=x;document.getElementById('modal').classList.add('show')}
@@ -237,7 +233,7 @@ function sendWhatsApp(){
  const ph=document.getElementById('phone').value||'غير مذكور';
  const m=document.getElementById('msg').value||'أريد معرفة السعر والتوفر';
  const text=`السلام عليكم، أريد الاستفسار عن: ${selected}\nالاسم: ${n}\nالهاتف: ${ph}\nالتفاصيل: ${m}`;
- window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank');
+ goToWhatsApp(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`);
 }
 document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
 
@@ -249,6 +245,12 @@ function updateCartBadge(){
  const b=document.getElementById('cartBadge');
  if(count>0){b.style.display='flex';b.textContent=count}else{b.style.display='none'}
 }
+function getContentId(name,variant){
+ if(name==='Honeywell PTM7950')return 'ptm7950';
+ if(name==='GD-3 Thermal Grease')return 'gd3';
+ if(name==='Maxtor AP-12')return 'maxtor-ap12-'+(variant||'default');
+ return name;
+}
 function addToCart(name,price,variant){
  const c=getCart();
  const v=variant||null;
@@ -256,7 +258,7 @@ function addToCart(name,price,variant){
  if(existing){existing.qty++}else{c.push({name,price,variant:v,qty:1})}
  saveCart(c);
  openCart();
- if(typeof fbq==='function'){fbq('track','AddToCart',{content_name:name,value:price,currency:'LYD'})}
+ if(typeof fbq==='function'){fbq('track','AddToCart',{content_name:name,content_ids:[getContentId(name,v)],content_type:'product',value:price,currency:'LYD'})}
 }
 function addMaxtorToCart(){
  const sel=document.getElementById('maxtorThickness');
@@ -329,8 +331,12 @@ function checkoutWhatsApp(){
   return `• ${label} × ${i.qty} = ${line} د.ل`;
  }).join('\n');
  let text=`السلام عليكم، أريد تأكيد الطلب التالي:\n${lines}\nالإجمالي: ${total} د.ل\n\nالاسم: ${n}\nالهاتف: ${ph}\nالمدينة: ${city}`;
- if(typeof fbq==='function'){fbq('track','InitiateCheckout',{value:total,currency:'LYD',num_items:c.reduce((s,i)=>s+i.qty,0)})}
- window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank');
+ if(typeof fbq==='function'){
+  const contentIds=c.map(i=>getContentId(i.name,i.variant));
+  const contents=c.map(i=>({id:getContentId(i.name,i.variant),quantity:i.qty}));
+  fbq('track','InitiateCheckout',{value:total,currency:'LYD',num_items:c.reduce((s,i)=>s+i.qty,0),content_ids:contentIds,content_type:'product',contents:contents});
+ }
+ goToWhatsApp(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`);
 }
 document.getElementById('cartModal').addEventListener('click',e=>{if(e.target.id==='cartModal')closeCart()});
 updateCartBadge();
